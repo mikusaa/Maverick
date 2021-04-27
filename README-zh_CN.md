@@ -73,19 +73,19 @@ tags:
 
 `frontmatter` 开始和结束于 `---`, 它将信息储存为 `key: value`。 下面列出了所有可用的选项：
 
-|     Key      | Required | Default Value | Possible Value         | Explanation                                                  |
+|     值      | 必须 | 默认值 | 可选值       | 解释                                                  |
 | :----------: | -------- | ------------- | ---------------------- | ------------------------------------------------------------ |
-|   `layout`   | false    | post          | post, page             | Type of this article.                                        |
-|   `title`    | true     | -             | -                      | The of this article                                          |
-|    `slug`    | true     | `title`       | -                      | Maverick uses this value to generate URL of this article. For example: `https://me.com/archives/a-interesting-story`. |
-|    `date`    | true     | -             | -                      | Publish date of this article in `yyyy-mm-dd hh:ss` format.   |
-|   `status`   | false    | publish       | publish, hidden, draft | Status of this article.                                      |
-|   `author`   | false    | -             | -                      | Author of this article.                                      |
-|  `excerpt`   | false    | -             | -                      | Will be used as excerpt of this article in home page and HTML `head` tag. If not set, Maverick will try to find `<!--more-->` and use content before as excerpt.  If still not found, the first paragraph will be used. |
-|  `showfull`  | false    | false         | true, false            | If set to `true`, full content will show in home page.       |
-|  `comment`   | false    | false         | true, false            | Turn on comment for this article. See how to enable comment in [Comment][4] section. |
-|    `tags`    | false    | -             | -                      | Tags of this article. If there are multiple tags, write them as above. Don't forget spaces before and after `-`. |
-| `categories` | false    | -             | -                      | Categories of this article. If there are multiple categories, write them as above. Don't forget spaces before and after `-` |
+|   `layout`   | 否    | post          | post, page             | 文章类型                                        |
+|   `title`    | 是     | -             | -                      | 文章标题                                          |
+|    `slug`    | 是     | `title`       | -                      | Maverick 会使用该值生成文章链接，例如：`https://me.com/archives/a-interesting-story`. |
+|    `date`    | 是     | -             | -                      | 文章发布时间，格式为：`yyyy-mm-dd hh:ss` |
+|   `status`   | 否    | publish       | publish, hidden, draft | 文章状态                                    |
+|   `author`   | 否    | -             | -                      | 文章作者                                  |
+|  `excerpt`   | 否    | -             | -                      | Will be used as excerpt of this article in home page and HTML `head` tag. If not set, Maverick will try to find `<!--more-->` and use content before as excerpt.  If still not found, the first paragraph will be used. |
+|  `showfull`  | 否    | false         | true, false            | 如果设置为 `true`，文章内容将会全部显示在首页 |
+|  `comment`   | 否    | false         | true, false            | 开启文章评论，详情请见 [Comment][4] section. |
+|    `tags`    | 否    | -             | -                      | Tags of this article. If there are multiple tags, write them as above. Don't forget spaces before and after `-`. |
+| `categories` | 否    | -             | -                      | Categories of this article. If there are multiple categories, write them as above. Don't forget spaces before and after `-` |
 
 我建议您保留一份 Maverick 随附的示例文章样本，以作为这些选项的参考。
 
@@ -108,7 +108,7 @@ tags:
 | `enable_jsdelivr`         | {<br />"enabled": False,<br />"repo": ""<br />} | 是不是启用 jsdelivr 。If you host your site on GitHub Pages, this option can enable [jsDelivr][8] as CDN service for all your static files, including JS files, CSS files and images. See `config.py` and preview site for an example. Basically, set `"enabled"` to `True` and set `"repo"` to `<user>/<repo>@<branch>`. |
 | `category_by_folder`      | `False`                                         | 分类方式。Category contents by folder structure rather than front-matter. |
 
-### Options for Your Site | 你网站的选项
+### Options for Your Site | 网站的选项
 
 | Option            | Default Value                             | Explanation                                                  |
 | ----------------- | ----------------------------------------- | ------------------------------------------------------------ |
@@ -302,7 +302,7 @@ template = "MyTheme"
 ```
 
    你需要在 config.py 文件中将 `template` 设置为下面这样：
-   
+
 ```python
 template = {
     "name": "MyTheme",
